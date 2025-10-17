@@ -1,0 +1,56 @@
+{
+  "name": "todo-fullstack-app",
+  "version": "1.0.0",
+  "description": "A modern full-stack Todo application with Laravel backend and Vue.js frontend",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && php artisan serve --host=127.0.0.1 --port=8000",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "install:backend": "cd backend && composer install",
+    "install:frontend": "cd frontend && npm install",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "migrate": "cd backend && php artisan migrate",
+    "seed": "cd backend && php artisan db:seed",
+    "fresh": "cd backend && php artisan migrate:fresh --seed",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && php artisan test",
+    "test:frontend": "cd frontend && npm run test",
+    "lint": "npm run lint:backend && npm run lint:frontend",
+    "lint:backend": "cd backend && ./vendor/bin/pint",
+    "lint:frontend": "cd frontend && npm run lint",
+    "format": "npm run format:backend && npm run format:frontend",
+    "format:backend": "cd backend && ./vendor/bin/pint",
+    "format:frontend": "cd frontend && npm run format"
+  },
+  "keywords": [
+    "todo",
+    "laravel",
+    "vue",
+    "jwt",
+    "websocket",
+    "pusher",
+    "fullstack",
+    "typescript",
+    "tailwindcss",
+    "shadcn"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/todo-fullstack-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/todo-fullstack-app/issues"
+  },
+  "homepage": "https://github.com/yourusername/todo-fullstack-app#readme"
+}
